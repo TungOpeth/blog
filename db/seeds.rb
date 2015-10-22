@@ -19,12 +19,10 @@ users = User.order(:created_at).take(6)
   users.each { |user| user.entries.create!(content: content) }
 end
 
-5.times do
+100.times do
   content = Faker::Lorem.sentence(5)
-  #user_id = Random.rand(100)
-  #entry_id = Random.rand(100)
-  user_id = 1
-  entry_id = 1
+  user_id = Random.rand(100)
+  entry_id = Random.rand(100)
   Comment.create!(user_id: user_id,
                   entry_id: entry_id,
                   content: content)
