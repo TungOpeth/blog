@@ -4,9 +4,11 @@ include SessionsHelper
 	  	if logged_in?
 	  		@user = current_user
 	  		@entry = current_user.entries.build
+			@comment = current_user.comments.build
       		@feed_items = current_user.feed.paginate(page: params[:page])
+
 	  	else
-	  		@entries = Entry.all.paginate(page: params[:page])
+	  		@home_entries = Entry.all.paginate(page: params[:page])
 	  	end
   end
 

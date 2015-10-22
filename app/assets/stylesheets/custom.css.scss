@@ -292,7 +292,7 @@ span.picture {
 
 .home_entries {
   list-style: none;
-  padding: 0;
+  padding: 100;
   li {
     padding: 20px 0;
     border-top: 1px solid #e8e8e8;
@@ -333,4 +333,42 @@ span.picture {
   input {
     border: 0;
   }
+}
+
+/* comment_content */
+
+.comment_content {
+  list-style: none;
+  padding: 10;
+  margin-right: 100;
+  li {
+    padding: 20px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .content {
+    display: block;
+    margin-left: 60px;
+  }
+  .timestamp {
+    color: $gray-light;
+    display: block;
+    margin-left: 60px;
+  }
+  .gravatar {
+    float: right;
+    margin-right: 10px;
+    margin-top: 1px;
+  }
+}
+
+aside {
+  textarea {
+    height: 10x;
+    margin-bottom: 1px;
+  }
+
 }
