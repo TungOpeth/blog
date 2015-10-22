@@ -21,7 +21,7 @@ class EntriesController < ApplicationController
   private
 
     def entry_params
-      params.require(:entry).permit(:content)
+      params.require(:entry).permit(:title, :content)
     end
     def correct_user
       @entry = current_user.entries.find_by(id: params[:id])

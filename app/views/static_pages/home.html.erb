@@ -19,18 +19,13 @@
 
 <% else %>
 
-<div class="center jumbotron">
-  <h1>Welcome to the Blog</h1>
-
-  <h2>
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
-  </h2>
 	<div class="col-md-8">
 	      <ol class="home_entries">
 	        <% @home_entries.each do |entry|%>
           <li id="<%= entry.id %>">
               <%= link_to gravatar_for(entry.user), entry.user %>
                 <span class="user"><%= link_to entry.user.name, entry.user %></span>
+                <span class="content"><b><%= entry.title %></b></span>
                 <span class="content"><%= entry.content %></span>
                 <span class="timestamp">
                   Posted at <%= entry.created_at.getlocal %>
